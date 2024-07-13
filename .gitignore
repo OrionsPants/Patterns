@@ -4,6 +4,8 @@ CMakeCache.*
 CMakeFiles/*
 [Tt]esting/*
 
+venv/*
+
 ### VisualStudioCode ###
 .vscode/*
 .vscode/settings.json
