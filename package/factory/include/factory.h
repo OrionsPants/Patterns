@@ -3,12 +3,28 @@
 
 #include <string>
 
-class Factory
+class Dialog
 {
  public:
-  std::string HelloWorld();
+  void Render();
 
  private:
+};
+
+class WindowsDialog
+{
+};
+
+class WebDialog
+{
+};
+
+class IButton
+{
+ public:
+  virtual ~IButton() = default;
+  virtual void Render() = 0;
+  virtual void OnClick() = 0;
 };
 
 #endif
