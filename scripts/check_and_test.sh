@@ -74,6 +74,9 @@ function main(){
         checks
     fi
 
+    cd "${THIS_SCRIPT_DIR}/../build/package/app"
+    ./main
+
     exit $?
 }
 
