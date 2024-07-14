@@ -6,15 +6,21 @@
 class Singleton
 {
  public:
-  static std::shared_ptr<Singleton> GetInstance()
+  Singleton(Singleton& other) = delete;
+  Singleton& operator=(const Singleton&) = delete;
+
+  static Singleton& GetInstance()
   {
+    static Singleton instance;
     return instance;
   }
 
- private:
-  Singleton() = default;
+  size_t accessor_count = 0;
 
-  static std::shared_ptr<Singleton> instance;
+ private:
+  Singleton()
+  {
+  }
 };
 
 #endif
